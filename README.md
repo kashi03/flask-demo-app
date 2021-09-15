@@ -2,6 +2,18 @@
 
 ubuntu 20.04  
 
+```
+git clone https://github.com/kashi03/flask-demo-app.git
+cd flask-demo-app/
+sudo pip install -r requirements.txt 
+sudo apt install nginx gunicorn
+sudo vim /etc/systemd/system/gunicorn.service
+sudo vim /etc/systemd/system/gunicorn.socket
+sudo vim /etc/nginx/conf.d/default.conf
+sudo systemctl enable --now gunicorn.socket
+sudo systemctl restart nginx
+```
+
 /etc/systemd/system/gunicorn.service
 
 ```
